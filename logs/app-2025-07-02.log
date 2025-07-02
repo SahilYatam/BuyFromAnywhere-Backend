@@ -1,0 +1,18 @@
+2025-07-02T02:55:53.765Z [INFO]: Database connected to: ac-bjjchwi-shard-00-02.yzpnnzs.mongodb.net
+2025-07-02T02:55:53.795Z [INFO]: User-Service running on PORT: 8000
+2025-07-02T02:57:19.454Z [INFO]: Database connected to: ac-bjjchwi-shard-00-00.yzpnnzs.mongodb.net
+2025-07-02T02:57:19.481Z [INFO]: User-Service running on PORT: 8000
+2025-07-02T02:58:07.712Z [INFO]: 🔌 Connecting DB for User-Service...
+2025-07-02T02:58:08.925Z [INFO]: Database connected to: ac-bjjchwi-shard-00-02.yzpnnzs.mongodb.net
+2025-07-02T02:58:08.926Z [INFO]: ✅ DB connected.
+2025-07-02T02:58:08.931Z [INFO]: User-Service running on PORT: 8000
+2025-07-02T02:58:57.113Z [INFO]: 🔌 Connecting DB for User-Service...
+2025-07-02T02:58:58.319Z [INFO]: Database connected to: ac-bjjchwi-shard-00-01.yzpnnzs.mongodb.net
+2025-07-02T02:58:58.326Z [INFO]: ✅ DB connected.
+2025-07-02T02:58:58.352Z [INFO]: User-Service running on PORT: 8000
+2025-07-02T03:00:05.219Z [INFO]: User-Service Recived SIGINT (Ctr+C), shutting down...
+2025-07-02T03:21:11.385Z [INFO]: 🔌 Connecting DB for User-Service...
+2025-07-02T03:21:12.502Z [INFO]: Database connected to: ac-bjjchwi-shard-00-01.yzpnnzs.mongodb.net
+2025-07-02T03:21:12.504Z [INFO]: ✅ DB connected.
+2025-07-02T03:21:12.516Z [INFO]: User-Service running on PORT: 8000
+2025-07-02T03:21:41.897Z [INFO]: User-Service Recived SIGINT (Ctr+C), shutting down...
