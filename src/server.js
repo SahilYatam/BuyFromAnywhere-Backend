@@ -1,23 +1,27 @@
 import logger from "./shared/utils/logger.js";
 import mongoose from "mongoose";
-
-
+import { userModel } from "./user/models/user.model.js";
+import { sessionModel } from "./user/models/session.model.js";
+ 
 import { alertingService } from "./shared/errorMonitoring/alertingService.js";
 
-export const createServer = async ({  app, port, serviceName, connectDB }) => {
+export const createServer = async ({ app, port, serviceName, connectDB }) => {
   let httpServer;
 
   try {
-    if (connectDB) {
-      logger.info(`🔌 Connecting DB for ${serviceName}...`);
-      await connectDB();
-      logger.info("✅ DB connected.");
-    }
+    const dbConnection = await connectDB();
+    logger.info(`🔌 Connecting DB for ${serviceName}...`);
+
+    const User = userModel(dbConnection);
+    const Session = sessionModel(dbConnection);
+
+    app.locals.db = dbConnection;
+    app.locals.User = User;
+    app.locals.Session = Session;
 
     httpServer = app.listen(port, () => {
       logger.info(`${serviceName} running on PORT: ${port}`);
     });
-    
   } catch (error) {
     logger.error(`Failed to start ${serviceName}: ${error.message}`);
   }
@@ -76,4 +80,3 @@ const shutdown = async (httpServer) => {
   logger.info("🛑 MongoDB connection closed");
   process.exit(0);
 };
-   

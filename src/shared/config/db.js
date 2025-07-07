@@ -35,7 +35,7 @@ const connectDatabase = async (dbURI) => {
         logger.error(`❌ MongoDB connection failed: ${error.message}`);
       });
 
-      return; //Success - exit the retry loop
+      return connect;
 
     } catch (error) {
       logger.error(`MongoDB connection attempt ${attempt} failed`, {

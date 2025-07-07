@@ -2,8 +2,16 @@
 node_modules/
 
 # Environment varibales
+.env
+
 .env*
+
 !.env*.example
+
+dist/
+logs/
+*.log
+.DS_Store
 
 # Code coverage
 coverage

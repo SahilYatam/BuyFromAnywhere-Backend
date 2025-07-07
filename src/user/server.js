@@ -4,7 +4,7 @@ dotenv.config();
 import { app } from "./app.js";
 import connectDatabase from "../shared/config/db.js";
 import { createServer } from "../server.js";
-
+import logger from "../shared/utils/logger.js";
 
 console.log("📦 src/server.js started");
 
@@ -18,6 +18,6 @@ console.log("📦 src/server.js started");
       connectDB: () => connectDatabase(process.env.USER_DB_URI),
     });
   } catch (error) {
-    console.error("❌ Server startup failed:", error);
+    logger.error("❌ Server startup failed:", {message: error.message, stack: error.stack});
   }
 })();
